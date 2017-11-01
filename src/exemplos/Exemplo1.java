@@ -1,37 +1,49 @@
-package exemplos;
+ package exemplos;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Optional;
 
 public class Exemplo1 {
     
     public static void main(String[] args) {
+
+        //ContaCorrente[] contas = new ContaCorrente[3];
         
-        //tipos inteiros
-        int numero1 = 50;
-        long numero2 = 200L;
+        List<ContaCorrente> contas = new ArrayList<ContaCorrente>();
         
-        //tipos decimais(ponto flutuante)
-        float numero3 = 2.6f;
-        double numero4 = 22.3;
+        ContaCorrente c1 = new ContaCorrente();
+        c1.setTitular(new Pessoa("Lucio"));
+        c1.setAgencia(123);
+        c1.setConta(12345);
+        c1.setSaldo(600);
         
-        //tipo caractere
-        char caractere = 't';
+        ContaCorrente c2 = new ContaCorrente();
+        c2.setTitular(new Pessoa("Serafim"));
+        c2.setAgencia(123);
+        c2.setConta(45678);
+        c2.setSaldo(900);
+
+        ContaCorrente c3 = new ContaCorrente();
+        c3.setTitular(new Pessoa("Sobrinho"));
+        c3.setAgencia(456);
+        c3.setConta(12345);
+        c3.setSaldo(1000);
+
+        ContaCorrente c4 = new ContaCorrente();
+        c4.setTitular(new Pessoa("Serafim"));
+        c4.setAgencia(123);
+        c4.setConta(45678);
+        c4.setSaldo(900);
         
-        //tipo logico
-        boolean logico = true;
-        
-        //tipo cadeia de caracteres
-        String texto = "Isto é um texto";
-        
-        String nome = "Pedro";
-        int idade = 25;
-        char sexo ='M';
-        
-        Pessoa p = new Pessoa("Pedro Augusto", 25, 'M', 1.78, 75.9);
-        
-        Pessoa p2 = new Pessoa("Lucio");
-      //  p.setNome = 
-        
-       // System.out.println(p);
-        
+        contas.add(c4);
+        contas.add(c3);
+        contas.add(c2);
+        contas.add(c1);
+                
+        System.out.println(contas.get(2));
+                
     }
     
 }
